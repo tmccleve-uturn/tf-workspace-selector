@@ -14,12 +14,13 @@ Before running this code, make sure you have the following prerequisites install
 1. Clone the repository.
 2. Build and run the project:
    ```
-   $ cargo run
+   $ cargo build -r
    ```
-3. The program will execute the `terraform workspace list` command to retrieve the available workspaces.
-4. A selection prompt will be presented to the user, displaying the list of workspaces.
-5. Select the desired workspace by entering its corresponding number.
-6. The program will execute the `terraform workspace select <workspace>` command to set the selected workspace.
+3. Place the build binary from the `target/release` directory into your `$PATH`
+4. The program will execute the `terraform workspace list` command to retrieve the available workspaces.
+5. A selection prompt will be presented to the user, displaying the list of workspaces.
+6. Select the desired workspace by entering its corresponding number.
+7. The program will execute the `terraform workspace select <workspace>` command to set the selected workspace.
 
 ## Functionality
 

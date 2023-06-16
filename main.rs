@@ -20,7 +20,11 @@ fn main() {
         .prompt();
 
     match selection {
-        Ok(workspace) => {
+        Ok(mut workspace) => {
+            workspace = workspace.replace("*", "")
+                .trim()
+                .to_owned();
+
             let _output = Command::new("terraform")
                 .args(&["workspace", "select", &workspace])
                 .output()
